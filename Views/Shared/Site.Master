@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <script type="text/javascript" src="/Scripts/javascripts/jquery.js" language="javascript"></script>
+    <script type="text/javascript" src="/Scripts/javascripts/jquery-ui-1.8.21.custom.min.js" language="javascript"></script>
+    <script type="text/javascript" src="/Scripts/javascripts/bootstrap/bootstrap.min.js"
+        language="javascript"></script>
+    <script type="text/javascript" src="/Scripts/javascripts/bootstrap/bootstrap.js"
+        language="javascript"></script>
+    <script type="text/javascript" src="/Scripts/javascripts/gritter.js" language="javascript"></script>
+    <script type="text/javascript" src="/Scripts/javascripts/documentor.js" language="javascript"></script>
+    <%--<script type="text/javascript" src="../../Scripts/javascripts/jquery.ba-postmessage.js" language="javascript"></script>--%>
+    <%--<script type="text/javascript" src="/Scripts/sco_api.js"></script>--%>
+    <link href="/Scripts/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    
+    <link href="/Scripts/stylesheets/documentor.css" rel="stylesheet" type="text/css" />
+    <link href="/Scripts/stylesheets/jquery-ui-1.8.17.custom.css" rel="stylesheet" type="text/css" />
+    <link href="/Scripts/stylesheets/gritter.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function getURLParameter(name) {
+            return decodeURIComponent((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1]);
+        }
+        $(function () {
+            $("#home_link").attr("href", "/Home?student_id=" + getURLParameter("student_id"));
+            //parent.score = 100;
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="ScriptHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="width:100%;height:100%;">
+    <div id="wrapper">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid" style="position: relative; z-index: 5;">
+                    <table width="100%"  style="border:0;">
+                        <tr style="border:0;">
+                            <td style="width:50%;direction:ltr;border:0;text-align:left;">
+                                <h2>
+                                    <small>Welcome </small><%:Session["student_id"]%></h2>
+                            </td>
+                            <td style="width:50%;direction:rtl;border:0;">
+                            <asp:ContentPlaceHolder ID="TimerHolder" runat="server"></asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <div class="container-fluid"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69939F10-3C03-4E87-82B7-CB6CBF953210}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KotakDocuMentor</RootNamespace>
+    <AssemblyName>KotakDocuMentor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=2.6.0.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelWrapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\ExcelWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CoachController.cs" />
+    <Compile Include="Controllers\DocucheckController.cs" />
+    <Compile Include="Controllers\DocumentController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PracticeController.cs" />
+    <Compile Include="Controllers\PracticeManagementController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
+    <Compile Include="Controllers\ResultManagementController.cs" />
+    <Compile Include="Controllers\ReviewController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\TestManagementController.cs" />
+    <Compile Include="Controllers\TimeStatisticController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\DocumentorDBM.cs">
+      <DependentUpon>DocumentorDBM.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentorDBM.designer.cs">
+      <DependentUpon>DocumentorDBM.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Models\KotakEmployeeDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KotakEmployeeDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\downloads\readme.txt" />
+    <Content Include="App_Data\Uploads\readme.txt" />
+    <Content Include="Content\images\bootstrap\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\bootstrap\glyphicons-halflings.png" />
+    <Content Include="Content\images\general\._input_left-focus.gif" />
+    <Content Include="Content\images\general\._input_left-hover.gif" />
+    <Content Include="Content\images\general\._input_left.gif" />
+    <Content Include="Content\images\general\._input_right-focus.gif" />
+    <Content Include="Content\images\general\._input_right-hover.gif" />
+    <Content Include="Content\images\general\._input_right.gif" />
+    <Content Include="Content\images\general\._input_text_left.gif" />
+    <Content Include="Content\images\general\._input_text_right.gif" />
+    <Content Include="Content\images\general\._textarea-bl-focus.gif" />
+    <Content Include="Content\images\general\._textarea-bl-hover.gif" />
+    <Content Include="Content\images\general\._textarea-bl.gif" />
+    <Content Include="Content\images\general\._textarea-bm-focus.gif" />
+    <Content Include="Content\images\general\._textarea-bm-hover.gif" />
+    <Content Include="Content\images\general\._textarea-bm.gif" />
+    <Content Include="Content\images\general\._textarea-br-focus.gif" />
+    <Content Include="Content\images\general\._textarea-br-hover.gif" />
+    <Content Include="Content\images\general\._textarea-br.gif" />
+    <Content Include="Content\images\general\._textarea-ml-focus.gif" />
+    <Content Include="Content\images\general\._textarea-ml-hover.gif" />
+    <Content Include="Content\images\general\._textarea-ml.gif" />
+    <Content Include="Content\images\general\._textarea-mm-focus.gif" />
+    <Content Include="Content\images\general\._textarea-mm-hover.gif" />
+    <Content Include="Content\images\general\._textarea-mm.gif" />
+    <Content Include="Content\images\general\._textarea-mr-focus.gif" />
+    <Content Include="Content\images\general\._textarea-mr-hover.gif" />
+    <Content Include="Content\images\general\._textarea-mr.gif" />
+    <Content Include="Content\images\general\._textarea-tl-focus.gif" />
+    <Content Include="Content\images\general\._textarea-tl-hover.gif" />
+    <Content Include="Content\images\general\._textarea-tl.gif" />
+    <Content Include="Content\images\general\._textarea-tm-focus.gif" />
+    <Content Include="Content\images\general\._textarea-tm-hover.gif" />
+    <Content Include="Content\images\general\._textarea-tm.gif" />
+    <Content Include="Content\images\general\._textarea-tr-focus.gif" />
+    <Content Include="Content\images\general\._textarea-tr-hover.gif" />
+    <Content Include="Content\images\general\._textarea-tr.gif" />
+    <Content Include="Content\images\general\._textarea_bl.gif" />
+    <Content Include="Content\images\general\._textarea_bm.gif" />
+    <Content Include="Content\images\general\._textarea_br.gif" />
+    <Content Include="Content\images\general\._textarea_ml.gif" />
+    <Content Include="Content\images\general\._textarea_mr.gif" />
+    <Content Include="Content\images\general\._textarea_tl.gif" />
+    <Content Include="Content\images\general\._textarea_tm.gif" />
+    <Content Include="Content\images\general\._textarea_tr.gif" />
+    <Content Include="Content\images\general\24-kotakmahindrabank.jpg" />
+    <Content Include="Content\images\general\Address Partnership.png" />
+    <Content Include="Content\images\general\Amount in figures.png" />
+    <Content Include="Content\images\general\Amount in words.png" />
+    <Content Include="Content\images\general\amount.png" />
+    <Content Include="Content\images\general\assignment.jpeg" />
+    <Content Include="Content\images\general\background.jpg" />
+    <Content Include="Content\images\general\back_disabled.jpg" />
+    <Content Include="Content\images\general\back_enabled.jpg" />
+    <Content Include="Content\images\general\bg_thumb.jpg" />
+    <Content Include="Content\images\general\btn_left.gif" />
+    <Content Include="Content\images\general\btn_right.gif" />
+    <Content Include="Content\images\general\bullet-1.png" />
+    <Content Include="Content\images\general\business-consulting_off.png" />
+    <Content Include="Content\images\general\case-study.jpeg" />
+    <Content Include="Content\images\general\checkbox.gif" />
+    <Content Include="Content\images\general\checkbox.png" />
+    <Content Include="Content\images\general\chk1.png" />
+    <Content Include="Content\images\general\chk2.png" />
+    <Content Include="Content\images\general\chk3.png" />
+    <Content Include="Content\images\general\close.gif" />
+    <Content Include="Content\images\general\company.png" />
+    <Content Include="Content\images\general\company_stamp.png" />
+    <Content Include="Content\images\general\concept.jpeg" />
+    <Content Include="Content\images\general\cops.png" />
+    <Content Include="Content\images\general\cross-button.jpeg" />
+    <Content Include="Content\images\general\cross-button.png" />
+    <Content Include="Content\images\general\cross.jpeg" />
+    <Content Include="Content\images\general\cross.png" />
+    <Content Include="Content\images\general\date.png" />
+    <Content Include="Content\images\general\debt.jpeg" />
+    <Content Include="Content\images\general\debt2.jpeg" />
+    <Content Include="Content\images\general\debt3.jpeg" />
+    <Content Include="Content\images\general\default.png" />
+    <Content Include="Content\images\general\document.jpeg" />
+    <Content Include="Content\images\general\Document_004.jpg" />
+    <Content Include="Content\images\general\download.png" />
+    <Content Include="Content\images\general\empty.png" />
+    <Content Include="Content\images\general\family-papers-400.jpg" />
+    <Content Include="Content\images\general\fantasy.jpg" />
+    <Content Include="Content\images\general\favicon.ico" />
+    <Content Include="Content\images\general\forward_disabled.jpg" />
+    <Content Include="Content\images\general\forward_enabled.jpg" />
+    <Content Include="Content\images\general\Franking _ Counter Indemnity.png" />
+    <Content Include="Content\images\general\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\general\glyphicons-halflings.png" />
+    <Content Include="Content\images\general\home.png" />
+    <Content Include="Content\images\general\home_ico.jpg" />
+    <Content Include="Content\images\general\home_ico.png" />
+    <Content Include="Content\images\general\home_ico2.jpg" />
+    <Content Include="Content\images\general\home_ico2.png" />
+    <Content Include="Content\images\general\home_ico_blue.png" />
+    <Content Include="Content\images\general\hourglass.gif" />
+    <Content Include="Content\images\general\ImportantDocs.jpg" />
+    <Content Include="Content\images\general\incg_hover.gif" />
+    <Content Include="Content\images\general\incg_hover2.gif" />
+    <Content Include="Content\images\general\index.html" />
+    <Content Include="Content\images\general\inner_texture.jpeg" />
+    <Content Include="Content\images\general\input_left-focus.gif" />
+    <Content Include="Content\images\general\input_left-hover.gif" />
+    <Content Include="Content\images\general\input_left.gif" />
+    <Content Include="Content\images\general\input_right-focus.gif" />
+    <Content Include="Content\images\general\input_right-hover.gif" />
+    <Content Include="Content\images\general\input_right.gif" />
+    <Content Include="Content\images\general\input_text_left.gif" />
+    <Content Include="Content\images\general\input_text_right.gif" />
+    <Content Include="Content\images\general\investment_banking_off.png" />
+    <Content Include="Content\images\general\knowledge.png" />
+    <Content Include="Content\images\general\knowledge_off.png" />
+    <Content Include="Content\images\general\letterhead.png" />
+    <Content Include="Content\images\general\llt.png" />
+    <Content Include="Content\images\general\location.png" />
+    <Content Include="Content\images\general\logo.png" />
+    <Content Include="Content\images\general\logo_with_name.png" />
+    <Content Include="Content\images\general\microfinance_off.png" />
+    <Content Include="Content\images\general\mind_map.png" />
+    <Content Include="Content\images\general\Name _ Partnership.png" />
+    <Content Include="Content\images\general\new.png" />
+    <Content Include="Content\images\general\next.png" />
+    <Content Include="Content\images\general\Page_10.png" />
+    <Content Include="Content\images\general\Page_8.jpg" />
+    <Content Include="Content\images\general\Page_8.png" />
+    <Content Include="Content\images\general\Page_9.jpg" />
+    <Content Include="Content\images\general\Page_9.png" />
+    <Content Include="Content\images\general\Place.png" />
+    <Content Include="Content\images\general\practice.jpeg" />
+    <Content Include="Content\images\general\practice.png" />
+    <Content Include="Content\images\general\prev.png" />
+    <Content Include="Content\images\general\ptotem.jpeg" />
+    <Content Include="Content\images\general\radio.gif" />
+    <Content Include="Content\images\general\rails.png" />
+    <Content Include="Content\images\general\rate.png" />
+    <Content Include="Content\images\general\Report.png" />
+    <Content Include="Content\images\general\results.png" />
+    <Content Include="Content\images\general\round seal _ kotak bank.png" />
+    <Content Include="Content\images\general\Rubber Seal _ Partnership _ vertical.png" />
+    <Content Include="Content\images\general\Rubber Seal _ Partnership.png" />
+    <Content Include="Content\images\general\save.png" />
+    <Content Include="Content\images\general\seal_example 1.png" />
+    <Content Include="Content\images\general\select_left.gif" />
+    <Content Include="Content\images\general\select_right.gif" />
+    <Content Include="Content\images\general\short-term-loans.png" />
+    <Content Include="Content\images\general\Signature _ Bank.png" />
+    <Content Include="Content\images\general\Signature _ Partner _ 1 _ Vertical.png" />
+    <Content Include="Content\images\general\Signature _ Partner _ 1.png" />
+    <Content Include="Content\images\general\Signature _ Partner _ 2 _ Vertical.png" />
+    <Content Include="Content\images\general\Signature _ Partner _ 2.png" />
+    <Content Include="Content\images\general\signature.png" />
+    <Content Include="Content\images\general\sort_asc.png" />
+    <Content Include="Content\images\general\sort_asc_disabled.png" />
+    <Content Include="Content\images\general\sort_both.png" />
+    <Content Include="Content\images\general\sort_desc.png" />
+    <Content Include="Content\images\general\sort_desc_disabled.png" />
+    <Content Include="Content\images\general\spiderman.jpg" />
+    <Content Include="Content\images\general\start_test.png" />
+    <Content Include="Content\images\general\stl.jpg" />
+    <Content Include="Content\images\general\system.png" />
+    <Content Include="Content\images\general\technology_off.png" />
+    <Content Include="Content\images\general\Test.png" />
+    <Content Include="Content\images\general\tests.png" />
+    <Content Include="Content\images\general\textarea-bl-focus.gif" />
+    <Content Include="Content\images\general\textarea-bl-hover.gif" />
+    <Content Include="Content\images\general\textarea-bl.gif" />
+    <Content Include="Content\images\general\textarea-bm-focus.gif" />
+    <Content Include="Content\images\general\textarea-bm-hover.gif" />
+    <Content Include="Content\images\general\textarea-bm.gif" />
+    <Content Include="Content\images\general\textarea-br-focus.gif" />
+    <Content Include="Content\images\general\textarea-br-hover.gif" />
+    <Content Include="Content\images\general\textarea-br.gif" />
+    <Content Include="Content\images\general\textarea-ml-focus.gif" />
+    <Content Include="Content\images\general\textarea-ml-hover.gif" />
+    <Content Include="Content\images\general\textarea-ml.gif" />
+    <Content Include="Content\images\general\textarea-mm-focus.gif" />
+    <Content Include="Content\images\general\textarea-mm-hover.gif" />
+    <Content Include="Content\images\general\textarea-mm.gif" />
+    <Content Include="Content\images\general\textarea-mr-focus.gif" />
+    <Content Include="Content\images\general\textarea-mr-hover.gif" />
+    <Content Include="Content\images\general\textarea-mr.gif" />
+    <Content Include="Content\images\general\textarea-tl-focus.gif" />
+    <Content Include="Content\images\general\textarea-tl-hover.gif" />
+    <Content Include="Content\images\general\textarea-tl.gif" />
+    <Content Include="Content\images\general\textarea-tm-focus.gif" />
+    <Content Include="Content\images\general\textarea-tm-hover.gif" />
+    <Content Include="Content\images\general\textarea-tm.gif" />
+    <Content Include="Content\images\general\textarea-tr-focus.gif" />
+    <Content Include="Content\images\general\textarea-tr-hover.gif" />
+    <Content Include="Content\images\general\textarea-tr.gif" />
+    <Content Include="Content\images\general\textarea_bl.gif" />
+    <Content Include="Content\images\general\textarea_bm.gif" />
+    <Content Include="Content\images\general\textarea_br.gif" />
+    <Content Include="Content\images\general\textarea_ml.gif" />
+    <Content Include="Content\images\general\textarea_mr.gif" />
+    <Content Include="Content\images\general\textarea_tl.gif" />
+    <Content Include="Content\images\general\textarea_tm.gif" />
+    <Content Include="Content\images\general\textarea_tr.gif" />
+    <Content Include="Content\images\general\thor.jpg" />
+    <Content Include="Content\images\general\tick.png" />
+    <Content Include="Content\images\general\tutorials.jpeg" />
+    <Content Include="Content\images\general\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Content\images\general\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Content\images\general\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Content\images\general\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Content\images\general\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Content\images\general\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\images\general\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Content\images\general\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Content\images\general\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Content\images\general\ui-icons_222222_256x240.png" />
+    <Content Include="Content\images\general\ui-icons_228ef1_256x240.png" />
+    <Content Include="Content\images\general\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Content\images\general\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Content\images\general\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\images\general\Untitled.png" />
+    <Content Include="Content\images\general\upload.png" />
+    <Content Include="Content\images\general\users.png" />
+    <Content Include="Content\images\general\welcome_icon_1.png" />
+    <Content Include="Content\images\general\welcome_icon_2.png" />
+    <Content Include="Content\images\general\welcome_icon_3.png" />
+    <Content Include="Content\images\general\welcome_icon_4.png" />
+    <Content Include="Content\images\general\welcome_image.png" />
+    <Content Include="Content\images\pimg\bridge.jpeg" />
+    <Content Include="Content\images\pimg\commodity.jpeg" />
+    <Content Include="Content\images\pimg\droplineod.jpeg" />
+    <Content Include="Content\images\pimg\fcy.jpg" />
+    <Content Include="Content\images\pimg\gateway.jpg" />
+    <Content Include="Content\images\pimg\lease.jpg" />
+    <Content Include="Content\images\pimg\mediumterm.jpeg" />
+    <Content Include="Content\images\pimg\overdraft.jpeg" />
+    <Content Include="Content\images\pimg\pofinance.jpg" />
+    <Content Include="Content\images\pimg\portfolio.jpeg" />
+    <Content Include="Content\images\pimg\project.jpeg" />
+    <Content Include="Content\images\pimg\promofunding.jpeg" />
+    <Content Include="Content\images\pimg\stl.jpeg" />
+    <Content Include="Content\images\pimg\trade.jpeg" />
+    <Content Include="Content\images\pimg\wcdl.jpeg" />
+    <Content Include="Content\images\pimg\wctl.jpeg" />
+    <Content Include="Global.asax" />
+    <Content Include="Libs\EPPlus.dll" />
+    <Content Include="Libs\ExcelLibrary.dll" />
+    <Content Include="Libs\ExcelWrapper.dll" />
+    <Content Include="Scripts\javascripts\application.js" />
+    <Content Include="Scripts\javascripts\bootstrap-button.js" />
+    <Content Include="Scripts\javascripts\bootstrap-popover.js" />
+    <Content Include="Scripts\javascripts\bootstrap-tooltip.js" />
+    <Content Include="Scripts\javascripts\bootstrap-typeahead.js" />
+    <Content Include="Scripts\javascripts\bootstrap.js" />
+    <Content Include="Scripts\javascripts\bootstrap.min.js" />
+    <Content Include="Scripts\javascripts\bootstrap\bootstrap-button.js" />
+    <Content Include="Scripts\javascripts\bootstrap\bootstrap-popover.js" />
+    <Content Include="Scripts\javascripts\bootstrap\bootstrap-tooltip.js" />
+    <Content Include="Scripts\javascripts\bootstrap\bootstrap-typeahead.js" />
+    <Content Include="Scripts\javascripts\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\javascripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\javascripts\dhtmlx\dhtmlxcommon.js" />
+    <Content Include="Scripts\javascripts\dhtmlx\dhtmlxgrid.js" />
+    <Content Include="Scripts\javascripts\dhtmlx\dhtmlxgridcell.js" />
+    <Content Include="Scripts\javascripts\dhtmlx\dhtmlxgrid_filter.js" />
+    <Content Include="Scripts\javascripts\dhtmlx\dhtmlxgrid_pgn.js" />
+    <Content Include="Scripts\javascripts\dhtmlx\dhtmlxgrid_srnd.js" />
+    <Content Include="Scripts\javascripts\dhtmlx\dhtmlxgrid_start.js" />
+    <Content Include="Scripts\javascripts\documentor.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.checkbox.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.coda-slider-2.0.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.dataTables.min.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.easing.1.3.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.gridnav.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.jstree.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.multiselect.filter.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.multiselect.js" />
+    <Content Include="Scripts\javascripts\exclusions\jQuery.radmenu.js" />
+    <Content Include="Scripts\javascripts\exclusions\jquery.slidorion.js" />
+    <Content Include="Scripts\javascripts\exclusions\liteaccordion.jquery.min.js" />
+    <Content Include="Scripts\javascripts\exclusions\svgvml.js" />
+    <Content Include="Scripts\javascripts\exclusions\tag-it.js" />
+    <Content Include="Scripts\javascripts\exclusions\ui.dropdownchecklist-1.4-min.js" />
+    <Content Include="Scripts\javascripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\javascripts\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="Scripts\javascripts\jquery.ba-postmessage.js" />
+    <Content Include="Scripts\javascripts\jquery.checkbox.js" />
+    <Content Include="Scripts\javascripts\jquery.coda-slider-2.0.js" />
+    <Content Include="Scripts\javascripts\jquery.dataTables.js" />
+    <Content Include="Scripts\javascripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\javascripts\jquery.jstree.js" />
+    <Content Include="Scripts\javascripts\jquery.min.js" />
+    <Content Include="Scripts\javascripts\jquery.multiselect.filter.js" />
+    <Content Include="Scripts\javascripts\jquery.multiselect.js" />
+    <Content Include="Scripts\javascripts\jquery.slidorion.js" />
+    <Content Include="Scripts\javascripts\json2.js" />
+    <Content Include="Scripts\javascripts\sco_api.js" />
+    <Content Include="Scripts\javascripts\svgvml.js" />
+    <Content Include="Scripts\javascripts\tag-it.js" />
+    <Content Include="Scripts\javascripts\ui.dropdownchecklist-1.4-min.js" />
+    <Content Include="Scripts\stylesheets\bootstrap-responsive.css" />
+    <Content Include="Scripts\stylesheets\bootstrap-responsive.min.css" />
+    <Content Include="Scripts\stylesheets\bootstrap.css" />
+    <Content Include="Scripts\stylesheets\bootstrap.min.css" />
+    <Content Include="Scripts\stylesheets\bootstrap\bootstrap-responsive.css" />
+    <Content Include="Scripts\stylesheets\bootstrap\bootstrap-responsive.min.css" />
+    <Content Include="Scripts\stylesheets\bootstrap\bootstrap.css" />
+    <Content Include="Scripts\stylesheets\bootstrap\bootstrap.min.css" />
+    <Content Include="Scripts\stylesheets\dhtmlxgrid.css" />
+    <Content Include="Scripts\stylesheets\dhtmlxgrid_dhx_black.css" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Scripts\stylesheets\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Scripts\stylesheets\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Scripts\stylesheets\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Scripts\stylesheets\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Scripts\stylesheets\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\stylesheets\jquery-ui-1.8.17.custom.css" />
+    <Content Include="Scripts\stylesheets\jquery-ui-1.8.21.custom.css" />
+    <Content Include="Scripts\stylesheets\jquery.dataTables.css" />
+    <Content Include="Scripts\stylesheets\Site.css" />
+    <Content Include="Scripts\stylesheets\vTabs.css" />
+    <Content Include="Views\Admin\GetDivisionReport.aspx" />
+    <Content Include="Views\Admin\GetReport.aspx" />
+    <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Admin\NewQuiz.aspx" />
+    <Content Include="Views\Admin\CaseStudyForm.ascx" />
+    <Content Include="Views\Admin\QuizForm.ascx" />
+    <Content Include="Views\Admin\SettingsForm.ascx" />
+    <Content Include="Views\Coach\GetLastAssignmentScore.aspx" />
+    <Content Include="Views\Coach\module_2.aspx" />
+    <Content Include="Views\Coach\module_3.aspx" />
+    <Content Include="Views\Coach\module_4.aspx" />
+    <Content Include="Views\Coach\module_5.aspx" />
+    <Content Include="Views\Coach\module_6.aspx" />
+    <Content Include="Views\Coach\module_content.aspx" />
+    <Content Include="Views\Coach\module_1.aspx" />
+    <Content Include="Views\Home\ListAttempts.aspx" />
+    <Content Include="Views\Home\ListCaseStudies.aspx" />
+    <Content Include="Views\Practice\ListPracticeAttempts.aspx" />
+    <Content Include="Views\Practice\ReviewPracticeAttempt.aspx" />
+    <Content Include="Views\Review\ListDocuments.aspx" />
+    <Content Include="Views\Test\DocketDocumentsQuiz.aspx" />
+    <Content Include="Views\Test\GetStatus.aspx" />
+    <Content Include="Views\Test\Index.aspx" />
+    <Content Include="Views\Test\ListDockets.aspx" />
+    <Content Include="Views\Test\ListDocuments.aspx" />
+    <Content Include="Views\Test\PlayDocumentTest.aspx" />
+    <Content Include="Views\Test\PlayQuiz.aspx" />
+    <Content Include="Views\Test\SaveDocumentResults.aspx" />
+    <Content Include="Views\Test\SaveQuizData.aspx" />
+    <Content Include="Views\Test\ShowReferenceDocument.aspx" />
+    <Content Include="Views\Test\StartPractice.aspx" />
+    <Content Include="Views\Test\UserStatistics.aspx" />
+    <Content Include="Views\Home\Doclauncher.aspx" />
+    <Content Include="Views\Coach\Documentor.aspx" />
+    <Content Include="Views\Home\intro.ascx" />
+    <Content Include="Views\Home\ListAssignments.aspx" />
+    <Content Include="Views\PracticeManagement\LandingPage.aspx" />
+    <Content Include="Views\PracticeManagement\ListPracticeDocuments.aspx" />
+    <Content Include="Views\PracticeManagement\PracticeDocument.aspx" />
+    <Content Include="Views\Practice\Index.aspx" />
+    <Content Include="Views\Practice\PracticeDocument.aspx" />
+    <Content Include="Views\Practice\ShowReferenceDocument.aspx" />
+    <Content Include="Views\Question\Create.aspx" />
+    <Content Include="Views\Question\Index.aspx" />
+    <Content Include="Views\TestManagement\DocketDocumentsQuiz.aspx" />
+    <Content Include="Views\TestManagement\Index.aspx" />
+    <Content Include="Views\TestManagement\ListDockets.aspx" />
+    <Content Include="Views\TestManagement\ListDocuments.aspx" />
+    <Content Include="Views\TestManagement\PlayDocumentTest.aspx" />
+    <Content Include="Views\TestManagement\PlayQuiz.aspx" />
+    <Content Include="Views\Review\ReviewDocumentTest.aspx" />
+    <Content Include="Views\Review\ReviewQuiz.aspx" />
+    <Content Include="Views\TestManagement\SaveDocumentResults.aspx" />
+    <Content Include="Views\TestManagement\SaveQuizData.aspx" />
+    <Content Include="Views\TestManagement\ShowReferenceDocument.aspx" />
+    <Content Include="Views\TimeStatistic\AddRecord.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\javascripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\javascripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\javascripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\javascripts\jquery.validate.js" />
+    <Content Include="Scripts\javascripts\jquery.validate.min.js" />
+    <Content Include="Scripts\javascripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\javascripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\javascripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\javascripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\javascripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\javascripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\javascripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\html_pages\divisions\" />
+    <Folder Include="Content\html_pages\documents\" />
+    <Folder Include="Content\html_pages\products\" />
+    <Folder Include="Content\images\blank_sections\" />
+    <Folder Include="Content\images\documents\" />
+    <Folder Include="Content\images\examples\" />
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\downloads\QuizQuestionsTest.xls" />
+    <None Include="Content\images\general\checklist.xls" />
+    <None Include="Content\images\general\chk2.pdf" />
+    <None Include="Content\images\general\chk3.pdf" />
+    <None Include="Content\images\general\Document-Verification" />
+    <Content Include="Content\images\general\pimg.zip" />
+    <None Include="Content\images\general\Sorting icons.psd" />
+    <None Include="Content\Templates\QuizQuestionsTemplate.xls" />
+    <None Include="Content\Reports\Report.xlsx" />
+    <None Include="Models\DocumentorDBM.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DocumentorDBM.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Models\KotakEmployeeDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>KotakEmployeeDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\javascripts\exclusions\jquery.gridnav.js~" />
+    <None Include="Scripts\javascripts\jquery.checkbox.js~" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\DocumentorDBM.dbml.layout">
+      <DependentUpon>DocumentorDBM.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\KotakEmployeeDB.dbml.layout">
+      <DependentUpon>KotakEmployeeDB.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>99</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:99</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!--  This notice must remain in place!
+ _______________________________________________________________
+|                                                               |
+|     AUTHOR  : Jeeremie { http://web-kreation.com }            |
+|DESCRIPTION  : LightForm - Ajax Contact Form                   |
+|   DOWNLOAD  : http://web-kreation.com/blog/?p=71              |
+|    VERSION  : 1.1                                             |
+|       DATE  : 2008.02.03                                      |
+|      EMAIL  : info@web-kreation.com                           |
+|    CREDITS  : Credits go to Moo Floor (www.moo.floor.ch) for  |
+|               their fabulous FormCheck2 and to Badboy         |
+|               (www.badboy.ro) his nice looking web form       |
+|_______________________________________________________________|
+--><head>
+<title>:::LightForm::: Ajax Contact form</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="Ajax Contact form using CheckForm2 and NiceForms.">
+<meta name="keywords" content="php, contact form, Ajax, mootools, checkform2, niceforms, Moo Floor, class, javascript, spamcheck, badboy.ro">
+<meta name="author" content="Jeremie Tisseau">
+
+<link rel="stylesheet" href="LightForm%20%20Ajax%20Contact%20form_files/main.css" type="text/css" media="screen">
+
+<script type="text/javascript" src="LightForm%20%20Ajax%20Contact%20form_files/mootools.js"></script>
+
+<!-- Formcheck2 / Moo.Floor.ch -->
+<!-- http://moo.floor.ch/?p=18 -->
+<script type="text/javascript" src="LightForm%20%20Ajax%20Contact%20form_files/formcheck.js"></script>
+<script type="text/javascript">
+	window.addEvent('domready', function(){check = new FormCheck('third', {
+		display : {
+			fadeDuration : 500,
+			errorsLocation : 1,
+			indicateErrors : 1,
+			showErrors : 1
+		}
+	})});
+</script>
+
+<!-- NiceForms / BadBoy.ro -->
+<!-- http://www.badboy.ro/articles/2005-07-23/niceforms_preview/ -->
+<script type="text/javascript" src="LightForm%20%20Ajax%20Contact%20form_files/niceforms.js"></script>
+
+
+
+</head>
+<body>
+<!-- The contact form starts here-->
+
+    <!-- Start HTML form -->
+   	<form name="form" method="post" id="third" action="/demos/LightForm/index.php" class="niceform">
+		<h1>:::LightForm::: Free Ajax/PHP Contact Form</h1>
+        <!-- Name -->
+		<label for="name"><strong><span class="blue">*</span> Name : </strong></label>
+			<img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_left.gif"><input value="Neel" style="width: 200px;" id="name" name="name" class="textinput" size="20" type="text"><img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_right.gif">
+
+		<!-- Email -->
+		<label for="email"><strong><span class="blue">*</span> Email : </strong></label>
+			<img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_left.gif"><input value="neel@neel.com" style="width: 200px;" id="email" name="email" class="textinput" size="20" type="text"><img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_right.gif">
+
+		<!-- Website -->
+		<label for="site">Website : </label>
+			<img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_left.gif"><input value="http://www.asds.com" style="width: 200px;" id="website" name="website" class="textinput" size="20" type="text"><img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_right.gif">
+
+		<!-- Subject -->
+	    <label for="subject"><strong><span class="blue">*</span> Subject : </strong></label>
+			<img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_left.gif"><input value="asdsdasdasd" style="width: 200px;" id="subject" name="subject" class="textinput" size="20" type="text"><img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_right.gif">
+
+		<!-- Message -->
+		<label for="msg"><strong><span class="blue">*</span> Your message : </strong></label><br><div style="width: 320px; height: 120px;" class="txtarea"><div class="tr"><img src="LightForm%20%20Ajax%20Contact%20form_files/txtarea_tl.gif" class="txt_corner"></div><div class="cntr"><div style="height: 110px;" class="cntr_l"></div><textarea style="width: 300px; height: 100px;" id="message" name="message" type="text" class="validate['required']" rows="10" cols="30">sdasdasdasdasd</textarea></div><div class="br"><img src="LightForm%20%20Ajax%20Contact%20form_files/txtarea_bl.gif" class="txt_corner"></div></div>
+			
+
+		<!-- Spam Check -->
+	    <label for="spamcheck"><span class="blue">*</span> <acronym title="[ Spam prevention ]"><strong>Are you human?</strong></acronym><strong> : <span class="blue">2 + 3 = ???</span></strong></label>
+			<img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_left.gif"><input value="5" style="width: 50px;" id="spamcheck" name="spamcheck" size="5" class="textinput" type="text"><img class="inputCorner" src="LightForm%20%20Ajax%20Contact%20form_files/input_right.gif">
+
+		<br><br>
+		<img class="buttonImg" src="LightForm%20%20Ajax%20Contact%20form_files/button_left.gif"><input class="buttonSubmit" value="Send it!" type="submit"><img class="buttonImg" src="LightForm%20%20Ajax%20Contact%20form_files/button_right.gif">
+
+	    <!-- Niceforms: mouse over effect -->
+		<!-- Do not remove the line below -->
+		<div id="stylesheetTest"></div>
+
+	</form>
+
+     <!-- Download -->
+	<!-- You can delete this! -->
+	<div class="dwnld">
+    	<a href="http://web-kreation.com/all/lightform-free-ajaxphp-contact-form/" title="Download!">Download LightForm! »</a>
+	</div> <!-- / Download -->
+
+
+	<!-- Footer -->
+	<!-- If you would like to support us, keep the footer intact. Many thanks! -->
+	<div class="footer">
+    	<p>Design by <a href="http://web-kreation.com/" title="Web-Kreation Home">Web-kreation</a> - Ajax Form validation (<a href="http://moo.floor.ch/?p=18" target="_blank" title="Moo Floor">FormCheck2</a>) by <a href="http://moo.floor.ch/" target="_blank" title="Moo Floor">Moo Floor</a> - This form uses <a href="http://www.badboy.ro/articles/2005-07-23/niceforms_preview/" target="_blank" title="NiceForms">NiceForms</a> (<a href="http://www.badboy.ro/" target="_blank" title="BadBoy">BadBoy.ro</a>) to style text fields and textareas.</p>
+		<p>© Some Copyrights by their respective authors (if you are not sure visit authors' websites).</p>
+	</div> <!-- / footer -->
+
+
+
+
+
+
+
+
+</body></html>

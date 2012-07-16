@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ELEARNING" Class="ElearningDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=NEEL-PC;Initial Catalog=ELEARNING;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ElearningConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UserInfo" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="UserLoginName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Division" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CC" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmpId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Business_TrainerId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HR_TrainerId" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PERSON_ID" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

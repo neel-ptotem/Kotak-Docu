@@ -1,0 +1,72 @@
+#vtab {
+margin: auto;
+width: 800px;
+height: 100%;
+}
+#vtab > ul > li {
+width: 130px;
+height: 150px;
+background-color: #fff !important;
+list-style-type: none;
+display: block;
+text-align: center;
+margin: auto;
+padding-bottom: 10px;
+border: 2px solid #fff;
+position: relative;
+border-right: none;
+opacity: .3;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+}
+#vtab > ul > li.selected {
+opacity: 1;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+border: 1px solid #ddd;
+border-right: none;
+z-index: 10;
+background-color: #fafafa !important;
+position: relative;
+}
+#vtab > ul {
+float: left;
+width: 110px;
+text-align: left;
+display: block;
+margin: auto 0;
+padding: 0;
+position: relative;
+top: 30px;
+}
+#vtab > div {
+background-color: #fafafa;
+margin-left: 150px;
+border: 1px solid #ddd;
+min-height: 500px;
+padding: 12px;
+position: relative;
+z-index: 9;
+-moz-border-radius: 20px;
+}
+#vtab > div > h4 {
+color: #800;
+font-size: 1.2em;
+border-bottom: 1px dotted #800;
+padding-top: 5px;
+margin-top: 0;
+}
+<!--[if IE 7]>
+
+    #vtab > ul > li.selected{
+        border-right: 1px solid #fff !important;
+    }
+    #vtab > ul > li {
+        border-right: 1px solid #ddd !important;
+    }
+    #vtab > div { 
+        z-index: -1 !important;
+        left:1px;
+    }
+
+<![endif]-->

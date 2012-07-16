@@ -1,0 +1,22 @@
+c:\users\ptotem\documents\visual studio 2010\Projects\Documentor_05Mar\Documentor_05Mar\bin\Documentor_05Mar.dll
+c:\users\ptotem\documents\visual studio 2010\Projects\Documentor_05Mar\Documentor_05Mar\bin\Documentor_05Mar.pdb
+c:\users\ptotem\documents\visual studio 2010\Projects\Documentor_05Mar\Documentor_05Mar\obj\Debug\ResolveAssemblyReference.cache
+c:\users\ptotem\documents\visual studio 2010\Projects\Documentor_05Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.dll
+c:\users\ptotem\documents\visual studio 2010\Projects\Documentor_05Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.pdb
+C:\Users\ptotem\Documents\Visual Studio 2010\Projects\Documentor_13Mar\Documentor_05Mar\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ptotem\Documents\Visual Studio 2010\Projects\Documentor_13Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.dll
+C:\Users\ptotem\Documents\Visual Studio 2010\Projects\Documentor_13Mar\Documentor_05Mar\bin\Documentor_05Mar.dll
+C:\Users\ptotem\Documents\Visual Studio 2010\Projects\Documentor_13Mar\Documentor_05Mar\bin\Documentor_05Mar.pdb
+C:\Users\ptotem\Documents\Visual Studio 2010\Projects\Documentor_13Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.pdb
+H:\.NET Projects\Documentor_16Mar\Documentor_13Mar\Documentor_05Mar\obj\Debug\ResolveAssemblyReference.cache
+H:\.NET Projects\Documentor_16Mar\Documentor_13Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.dll
+H:\.NET Projects\Documentor_16Mar\Documentor_13Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.pdb
+H:\.NET Projects\Documentor_16Mar\Documentor_13Mar\Documentor_05Mar\bin\Documentor_05Mar.dll
+H:\.NET Projects\Documentor_16Mar\Documentor_13Mar\Documentor_05Mar\bin\Documentor_05Mar.pdb
+F:\Projects\dotNET\Documentor_13Mar\Documentor_05Mar\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\dotNET\Documentor_13Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.dll
+F:\Projects\dotNET\Documentor_13Mar\Documentor_05Mar\bin\Documentor_05Mar.dll
+F:\Projects\dotNET\Documentor_13Mar\Documentor_05Mar\bin\Documentor_05Mar.pdb
+F:\Projects\dotNET\Documentor_13Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.pdb
+F:\Projects\dotNET\Documentor_13Mar\Documentor_05Mar\obj\Debug\Interop.MIMEEDIT.dll
+F:\Projects\dotNET\Documentor_13Mar\Documentor_05Mar\obj\Debug\Documentor_05Mar.csproj.ResolveComReference.cache

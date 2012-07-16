@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/KotakDocuMentor_deploy" />
+  <setParameter name="DocumentorDBConnectionString-Web.config Connection String" value="data source=PTOTEM-PC\SQLEXPRESS;Initial Catalog=DocuMentorDB;User Id=sa;Password=p20o20e13;" />
+  <setParameter name="DocuMentorDBConnectionString1-Web.config Connection String" value="Data Source=PTOTEM-PC\SQLEXPRESS;Initial Catalog=DocuMentorDB;Persist Security Info=True;User ID=sa;Password=p20o20e13" />
+</parameters>

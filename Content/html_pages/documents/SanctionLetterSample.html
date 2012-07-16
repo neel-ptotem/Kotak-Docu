@@ -1,0 +1,233 @@
+<link href="assets/application.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="assets/bootstrap.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="assets/colorpicker.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="assets/jquery-ui-1.8.17.custom.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="assets/pslide.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="assets/scaffolds.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="assets/silverspoon.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<link href="assets/welcome.css?body=1" media="screen" rel="stylesheet" type="text/css" />
+<script src="assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="assets/bootstrap-colorpicker.js?body=1" type="text/javascript"></script>
+<script src="assets/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="assets/jquery-ui-1.8.16.custom.min.js?body=1" type="text/javascript"></script>
+<script src="assets/jquery.dataTables.min.js?body=1" type="text/javascript"></script>
+<script src="assets/pslide.js?body=1" type="text/javascript"></script>
+<script src="assets/swfobject.js?body=1" type="text/javascript"></script>
+<script src="assets/tinymce/preinit.js?body=1" type="text/javascript"></script>
+<script src="assets/tinymce/tiny_mce_jquery.js?body=1" type="text/javascript"></script>
+<script src="assets/tinymce/jquery-tinymce.js?body=1" type="text/javascript"></script>
+<script src="assets/tinymce-jquery.js?body=1" type="text/javascript"></script>
+<script src="assets/application.js?body=1" type="text/javascript"></script>
+<script src="assets/jquery.magnifier.js"type="text/javascript" ></script>
+
+
+
+<div id="pslide_display_back" style=" position: absolute;
+        top: 20px;
+        left: 150px;
+        border-radius: 10px;
+        margin-top: 30px;
+        width: 960px;
+        height: 600px;
+        background: white;
+        overflow: hidden;
+        border:1px solid black;
+        background-color: ;
+        opacity: ">
+
+      <img alt="Docuback" src="assets/system/pfiles/764/original/docuback.jpg" style="position:absolute;width:960px;height:600px;" />
+
+</div>
+<div id="pslide_display" style="
+position: absolute;
+        top: 20px;
+        left: 150px;
+        border-radius: 10px;
+        margin-top: 30px;
+        width: 960px;
+        height: 600px;
+        border: 1px solid #000000;
+        background: transparent;
+        overflow: hidden;">
+  <div>
+
+
+
+
+
+            <div id="2604" class="colored_div" style="border-radius:7px;background-color:rgb(0,0,0);opacity:0.5;position: absolute;left:-5px;top:113px;height:157px;width:227px">
+            </div>
+            <div style="color:rgb(255,255,255);padding:9px;position: absolute;left:-5px;top:113px;height:157px;width:227px">
+
+              <div class="design_buttons">
+
+
+              </div>
+              <div style="text-align: center;padding:27.163257158590312px;font-size: 30.177599308096063px;line-height:31.68647927350087px; ">
+ Sanction Letter Sample
+</div>
+        </div>
+
+
+
+
+            <div id="2605" class="colored_div" style="border-radius:10px;background-color:rgb(0,0,0);opacity:0;position: absolute;left:357px;top:10px;height:565px;width:439px">
+            </div>
+            <div style="color:rgb(0,0,0);padding:9px;position: absolute;left:357px;top:10px;height:565px;width:439px">
+
+              <div class="design_buttons">
+
+
+              </div>
+              <link href="assets/pslidecss/anything/animate.css" media="screen" rel="stylesheet" type="text/css"/>
+<link href="assets/pslidecss/anything/anythingslider.css" media="screen" rel="stylesheet" type="text/css"/>
+<!--<link href="assets/pslidecss/anything/anythingslider-ie.css" media="screen" rel="stylesheet" type="text/css"/>-->
+<link href="assets/pslidecss/anything/theme-metallic.css" media="screen" rel="stylesheet" type="text/css"/>
+<script src="assets/pslidejs/jquery.anythingslider.fx.min.js" type="text/javascript"></script>
+<script src="assets/pslidejs/jquery.anythingslider.min.js" type="text/javascript"></script>
+
+<style>
+    #slider {
+        width: 439px;
+        height: 640px;
+    }
+
+        /* images with caption */
+    #slider img {
+        width: 417.04999999999995px;
+        height: 536.75px;
+    }
+
+        /* position the panels so the captions appear correctly */
+    #slider .panel {
+        position: relative;
+    }
+
+        /* captions */
+    #slider .caption-top, #slider .caption-right,
+    #slider .caption-bottom, #slider .caption-left {
+        background: #000;
+        color: #fff;
+        padding: 10px;
+        margin: 0;
+        position: relative;
+        z-index: 10;
+        opacity: .8;
+        filter: alpha(opacity = 80);
+    }
+
+        /*** Set Slider dimensions here! Version 1.7+ ***/
+    #slider {
+        /*background: white;*/
+        /*width: 300px;*/
+        /*height: 300px;*/
+        list-style: none;
+    }
+
+    #slider li {
+        position: relative;
+    }
+
+
+</style>
+
+<script type="text/javascript">
+    $(function () {
+        // caption toggle animation time
+        var toggleTime = 500,
+        // always show caption when slide comes into view
+                showCaptionInitially = true,
+
+                updateCaption = function (slider, init) {
+                    if (init && showCaptionInitially) {
+                        setTimeout(function () {
+                            slider.$targetPage.find('.caption').animate({
+                                bottom:0
+                            }, toggleTime);
+                        }, slider.options.delayBeforeAnimate + toggleTime);
+                    } else if (!init) {
+                        var cap = slider.$lastPage.find('.caption');
+                        cap.css('bottom', -cap.innerHeight());
+                    }
+                };
+
+        $('#slider').anythingSlider({
+            //    buildNavigation    : false,
+            // *********** Callbacks ***********
+            // Callback when the plugin finished initializing
+            onInitialized:function (e, slider) {
+                slider.$items.each(function () {
+                    var cap = $(this).find('.caption');
+                    cap.css('bottom', -cap.innerHeight()).click(function () {
+                        cap.animate({
+                            bottom:(cap.css('bottom') === "0px" ? -cap.innerHeight() : 0)
+                        }, toggleTime);
+                    });
+                });
+                updateCaption(slider, true);
+            },
+
+            // Callback before slide animates
+            onSlideBegin:function (e, slider) {
+                updateCaption(slider, true);
+            },
+
+            // Callback after slide animates
+            onSlideComplete:function (slider) {
+                updateCaption(slider, false);
+            }
+
+        });
+    });
+</script>
+<ul id="slider">
+      <li>
+        <img src="assets/system/images/1189/original/1.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1190/original/2.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1191/original/3.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1192/original/4.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1193/original/5.jpg"  class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1194/original/6.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1195/original/7.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1196/original/8.jpg" class="magnify" style="max-height:700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1197/original/9.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+      <li>
+        <img src="assets/system/images/1198/original/10.jpg" class="magnify" style="max-height: 700px"/>
+
+      </li>
+
+</ul>
+
+
+        </div>
+
+  </div>
+</div> <div style='position:absolute; top:40%;left:20px'><a href= 'Youneedtocheckfor.html'><img src='assets/previous.png'/></a></div>
+<div style='position:absolute; top:50px;left:25px'><a href= '/user'><img src='/assets/home_ico_blue.png'/></a></div>
